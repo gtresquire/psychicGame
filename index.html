@@ -21,37 +21,48 @@
 
 
       <script>
+
+//create a variable with all letter options
+
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
     'm','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-// Variables for tracking our wins, losses, guesses so far and guesses remaining. Begin at 0.
+// initialize variables for tracking our wins, losses, guesses so far and guesses left.
 var wins = 0;
 var losses = 0;
-var guessesLeft = 10;
 var guessesSoFar = 0;
+var guessesLeft = 26
 
-    var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
-   // When the user presses a key function runs.  //Need to work on the logic below in order to record
-//    and track the correct results.  Need better reflection of game parameters
+//Use selects a key and presses. This initiates an event function.
 
-   document.onkeypress = function(event) {
+    document.onkeypress = function(event) {
     var userGuess = event.key;
 
-    // while (guessesLeft > 0); guessesLeft--; guessesSoFar++; {
+//   Generate random letter from array and store in a variable.
 
-        if(userGuess === computerChoice){
-            wins++;
-            }
-        else {
-            losses++;
-            } 
+    var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log (computerChoice) ;
+
+// Logic to compare computer choice and user choice.
+// Need to put in a counter to track guesses so far, and guess left
+
+    if(userGuess === computerChoice){
+        wins++;  
+    }
+        
+    else{
+        losses++;  
+    }
+    
 
     document.getElementById('wins').innerHTML = "Wins: " + wins;
-    document.getElementById('losses').innerHTML = "Losses: " + losses;
-    document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
-    document.getElementByID('guessesSoFar').innerHTML = "Your Guesses so far: " +guessesSoFar;
-}
+    document.getElementById('losses').innerHTML = "losses: " + losses;
+    document.getElementById('guessesSoFar').innerHTML = "Guesses SoFar: " + guesses;
+    document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guesses;
+
+} 
+
       
       </script>
 
