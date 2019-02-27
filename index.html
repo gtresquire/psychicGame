@@ -47,23 +47,41 @@ var guessesLeft = 26
 // Logic to compare computer choice and user choice.
 // Need to put in a counter to track guesses so far, and guess left
 
+    // var i = 0 
+    // for (i=0, i<26, i++) ({
+    
+    // while (guessesLeft <=26) {
+
+        // below code seems to increment all elements by mult of 26.. 
+        // var i = 0;
+        // for (i = 0; i < 26 ; i++) {
+
+{
     if(userGuess === computerChoice){
-        wins++;  
+        wins++; guessesSoFar++; guessesLeft--;
     }
         
     else{
-        losses++;  
+        losses++;  guessesSoFar++; guessesLeft--;
     }
-    
+
 
     document.getElementById('wins').innerHTML = "Wins: " + wins;
-    document.getElementById('losses').innerHTML = "losses: " + losses;
-    document.getElementById('guessesSoFar').innerHTML = "Guesses SoFar: " + guesses;
-    document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guesses;
+    document.getElementById('losses').innerHTML = "Losses: " + losses;
+    document.getElementById('guessesSoFar').innerHTML = "Guesses SoFar: " + guessesSoFar;
+    document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
+    } 
 
-} 
+    // if (guessesLeft = 0){
+    //     break;
+    // }
 
-      
+}
+
+// }
+
+
+// });
       </script>
 
     
