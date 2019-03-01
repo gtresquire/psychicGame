@@ -11,7 +11,8 @@
 <body>
 
     <div>
-        <p id="directions-text">Guess what letter I am thinking of.</p>
+        <p id="directions-text">Guess what letter I am thinking of. <br> Click any letter to begin and see
+            if you can guess correctly. <br> You can have 26 guesses.  Good luck!</p>
         <p id="wins"></p>
         <p id="losses"></p>
         <p id="guessesLeft"></p>
@@ -69,7 +70,9 @@ var guessesLeft = 26;  //this can go into a function as an initializer.. which c
     if(userGuess === computerChoice){
         wins++; guessesSoFar++; guessesLeft--;
         if(guessesLeft == 0){
-            play = false;
+            play = false; 
+            document.getElementById("directions-text").innerHTML = "No More Guesses Left! Game Over.";
+
         }
     }
         
@@ -77,6 +80,7 @@ var guessesLeft = 26;  //this can go into a function as an initializer.. which c
         losses++;  guessesSoFar++; guessesLeft--;
         if(guessesLeft == 0){
             play = false;
+            document.getElementById("directions-text").innerHTML = "No More Guesses Left! Game Over.";
         }
     }
 
