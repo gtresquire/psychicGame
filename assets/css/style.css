@@ -1,0 +1,53 @@
+body {background-image: url("../images/zoltar.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 400px;
+background-color: lightgoldenrodyellow;}
+
+#container{
+  width: 500px;
+}
+
+#directions-text{
+text-align: center;
+justify-content: left;
+font-size: 36px;
+line-height: 16px;
+color: yellowgreen;
+margin-bottom: 50px; 
+margin-top: 20px; 
+}
+
+#scoretracking {
+  float: right;
+  margin-right: 200px;
+  font-size: 40px;
+line-height: 15px;
+color: yellowgreen;
+}
+
+/* #losses {
+  float: right;
+  margin-right: 115px;
+  font-size: 40px;
+line-height: 15px;
+color: yellowgreen;
+} */
+
+#guesstracking{
+  float: left;
+  margin-left: 90px;
+  font-size: 40px;
+line-height: 15px;
+color: yellowgreen;
+
+}
+
+/* #guessesSoFar{
+  float: left;
+  margin-left: 120px;
+  font-size: 40px;
+line-height: 15px;
+color: yellowgreen;
+} */
